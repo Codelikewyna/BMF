@@ -205,6 +205,12 @@ h4 {
   width: 75%
 }
 
+
+.review {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
 .banner .tabs-content {
 	margin-top: 120px;
 }
