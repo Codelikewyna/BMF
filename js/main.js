@@ -132,3 +132,20 @@ jQuery(document).ready(function($) {
 
 
 });
+
+
+
+function removeLoader() {
+      const loader = document.getElementById('loader');
+      if (loader) loader.style.display = 'none';
+    }
+
+    const script = document.createElement('script');
+    script.src = "https://tp.media/content?currency=usd&trs=364981&shmarker=585487&show_hotels=false&powered_by=false&locale=en&searchUrl=www.aviasales.com%2Fsearch&primary_override=%2332a8dd&color_button=%2332a8dd&color_icons=%2332a8dd&dark=%23262626&light=%23FFFFFF&secondary=%23FFFFFF&special=%23C4C4C4&color_focused=%2332a8dd&border_radius=20&plain=true&promo_id=7879&campaign_id=100";
+    script.async = true;
+    script.charset = "utf-8";
+    script.onload = removeLoader;
+    document.getElementById('widget-container').appendChild(script);
+
+
+
