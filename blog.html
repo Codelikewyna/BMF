@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Blog - BudgetingMyFlight</title>
+    <meta name="description" content="Explore expert travel tips and insights with BudgetingMyFlight's latest blog posts.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="logo.png">
+    <link rel="icon" href="images/logo2.png">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/hero-slider.css">
+    <link rel="stylesheet" href="css/owl-carousel.css">
+    <link rel="stylesheet" href="css/codelikewyna-style.css">
+    <link rel="stylesheet" href="css/blog.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <!-- Modernizr -->
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Page Heading -->
+    <section class="page-heading" id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="BudgetingMyFlight Logo" id="contact-logo">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="page-direction-button">
+                        <a href="index.html">
+                            <img class="homeicon" width="26" height="26" src="https://img.icons8.com/cotton/70/home--v1.png" alt="Go Back Home Icon"> Go Back Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-heading">
+                        <h2>Our Latest Blog Posts</h2>
+                        <p>Discover expert tips and success stories to boost your travel journey—whether you're starting out or leveling up!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="blog-posts">
+                <div id="blogspinner">
+                    <div class="spinner"></div>
+                </div>
+                <ul id="posts-list"></ul>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="primary-button">
+                        <a href="https://budgetingmyflightblog.blogspot.com/?m=1" class="scroll-top"> <img width="20" height="20" src="https://img.icons8.com/cotton/64/literature-1.png" alt=""/>View All Blogs</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <ul class="social-icons">
+                        <li><a href="https://wa.me/420603245374"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a href="https://www.instagram.com/budgeting_my_flight?igsh=cXdlYjZxOHRjaDdi&utm_source=qr"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-12">
+                    <div class="blog-button">
+                        <a href="contact.html"><i class="fa fa-phone"></i> Contact Us and FAQs</a>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <p>Copyright &copy; 2024 BudgetingMyFlight | Web Design: <a href="https://codelikewyna.com.ng" target="_parent"><em>CodeLikeWyna Tech Lab</em></a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/blog.js"></script>
+
+    <!-- Scroll Functions -->
+    <script>
+        $(document).ready(function() {
+            // Navigation click actions
+            $('.scroll-link').on('click', function(event) {
+                event.preventDefault();
+                var sectionID = $(this).attr("data-id");
+                scrollToID('#' + sectionID, 750);
+            });
+            // Scroll to top action
+            $('.scroll-top').on('click', function(event) {
+                event.preventDefault();
+                $('html, body').animate({ scrollTop: 0 }, 'slow');
+            });
+            // Mobile nav toggle
+            $('#nav-toggle').on('click', function(event) {
+                event.preventDefault();
+                $('#main-nav').toggleClass("open");
+            });
+        });
+
+        function scrollToID(id, speed) {
+            var offSet = 0;
+            var targetOffset = $(id).offset().top - offSet;
+            $('html, body').animate({ scrollTop: targetOffset }, speed);
+        }
+    </script>
+</body>
+</html>
