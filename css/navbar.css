@@ -1,0 +1,124 @@
+/* Navbar Styling */
+/* Semi-Transparent Navbar */
+.navbar {
+    background: rgba(0, 0, 0, 0.5) !important; /* 50% transparent black */
+    backdrop-filter: blur(5px); /* Optional: Adds a slight blur effect */
+    box-shadow: none;
+  /*  border-radius: 10px;*/
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+}
+
+/* Remove Bootstrap's forced background */
+.navbar.bg-dark,
+.navbar.navbar-dark {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Ensure body content starts after the navbar */
+body {
+    padding-top: 50px;
+}
+
+/* Hamburger Icon Styling */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When Navbar is Open (X icon) */
+.navbar-toggler:not(.collapsed) .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 10px);
+}
+
+.navbar-toggler:not(.collapsed) .hamburger span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.navbar-toggler:not(.collapsed) .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -10px);
+}
+
+/* When Navbar is Closed (Show Three Lines) */
+.navbar-toggler.collapsed .hamburger span {
+    transform: none;
+    opacity: 1;
+}
+
+
+/* Remove default border and background */
+.navbar-toggler {
+    border: none !important;
+    background: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    
+}
+
+/* Remove focus outline */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+
+#navbarText{
+    font-size: 19px;
+
+  font-weight: bold;
+
+  display: block;
+
+  color: white;
+    
+    position: relative;
+    
+    right: 30px;
+}
+
+
+.nav-link{
+    position: relative;
+    left: 30px;
+    font-size: 13px;
+    margin-top: 17px;
+    
+}
+
+
+.dropdownText{
+    font-size: 14px;
+
+  font-weight: bold;
+
+  dislay: block;
+
+  color: white;
+    
+    position: relative;
+    
+    right: 30px;
+}
+
+
+.dropdown-menu{
+    background-color: #e5f1ff;
+    
+}
