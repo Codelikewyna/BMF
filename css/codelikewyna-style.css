@@ -1,0 +1,833 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100%;
+    background-color: #e5f1ff;
+}
+
+.weatherwidget-io {
+    width: 100%;
+    display: block;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 10px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.weatherwidget-io:hover {
+    transform: scale(1.02);
+}
+
+ul {
+    list-style: none;
+    margin: 0px;
+}
+
+p {
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.section-heading h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #121212;
+    overflow-y: hidden;
+}
+
+h4 {
+    overflow-y: hidden;
+}
+
+.page-direction-button a, .blog-button a, .primary-button a {
+    text-decoration: none;
+    margin-top: 15px;
+    width: 180px;
+    padding: 0px 18px;
+    height: 36px;
+    background-color: #fd7604;
+    font-size: 13px;
+    color: #121212;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    border-radius: 20px;
+}
+
+.page-direction-button a:hover, .blog-button a:hover, .primary-button a:hover {
+    background-color: #e56b03;
+}
+
+.blogButton {
+    text-align: center;
+}
+
+.banner {
+    background-image: url(../img/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.banner .left-side {
+    text-align: center;
+    height: 100%;
+    margin-left: -100vh;
+    padding-left: 100vh;
+}
+
+.banner .page-direction-button {
+    margin-top: 120px;
+}
+
+.banner .logo img {
+    padding-top: 60px;
+    max-width: 100%;
+}
+
+#logo {
+    width: 75%;
+}
+
+.banner .social-links {
+    list-style: none;
+    margin-top: 0px;
+    padding-right: 100px;
+    padding-left: 15px;
+}
+
+.banner .social-links li {
+    text-align: center;
+    margin: 10px 0px;
+    transition: all 0.5s;
+    border-radius: 15px;
+}
+
+.banner .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.5s;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 400;
+    width: 100%;
+    height: 60px;
+    padding: 0 20px;
+    background-color: #015291;
+    border-radius: 18px;
+}
+
+.banner .social-links a em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+.banner .social-links a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(250, 250, 250, 0.2);
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.banner .social-links li:hover {
+    background-color: #fd7604;
+}
+
+.banner .social-links li:hover i {
+    background-color: rgba(255, 225, 101, 0.3);
+}
+
+.banner .tabs-content h4 {
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-size: 24px;
+    color: #015291;
+    font-weight: 700;
+    overflow-y: hidden;
+}
+
+.banner .submit-form {
+    text-align: center;
+    margin: 155px 0px;
+    background-color: rgba(228, 234, 239, 0.4);
+    padding: 30px;
+    border-radius: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-form h4 {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    border-bottom: 1px solid #dbdada;
+    color: #015291;
+}
+
+.submit-form h4 em {
+    font-style: normal;
+}
+
+.submit-form label {
+    margin-top: 10px;
+    float: left;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #121212;
+}
+
+.submit-form select, .submit-form .date, .submit-form .text {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 36px;
+    border: none;
+    background-color: #e7e7e7;
+    font-size: 11px;
+    color: #9a9a9a;
+    outline: none;
+    padding: 0px 10px;
+    display: inline-block;
+    border-radius: 40px;
+}
+
+.submit-form button {
+    margin-top: 15px;
+    width: 100%;
+    height: 36px;
+    background-color: #fd7604;
+    font-size: 13px;
+    color: #121212;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+#nlText {
+    color: white !important;
+}
+
+#weather {
+    margin-top: 100px;
+}
+
+.weather-content {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#weather .tabs {
+    list-style: none;
+    margin-top: 0px;
+    padding-right: 0px;
+    background-color: #015291;
+    border-radius: 15px 15px 0 0;
+}
+
+#weather .tabs li {
+    display: inline-block;
+    text-align: center;
+    margin: 0px -2px;
+    width: 20%;
+}
+
+#weather .tabs li:last-child {
+    margin-left: 2px;
+}
+
+#weather .tabs a {
+    display: block;
+    transition: all 0.5s;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    display: inline-block;
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    padding-left: 0px;
+    text-align: center;
+}
+
+#weather .tabs a em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+#weather .tabs .active {
+    background-color: #fd7604;
+    border-radius: 10px 10px 0 0;
+}
+
+.weather-item {
+    padding: 40px 30px 30px 30px;
+    text-align: center;
+    display: block;
+    background-color: rgba(250, 250, 250, 0.3);
+}
+
+.weathergroup {
+    padding: 3px 30px 10px 30px;
+    display: block;
+    overflow: visible;
+    width: 100%;
+    position: relative;
+    bottom: 10px;
+}
+
+.wrapper {
+    display: block;
+    overflow: visible;
+    width: 100%;
+}
+
+.weather-item h6 {
+    font-size: 18px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 0px;
+}
+
+.weather-item .weather-icon {
+    display: inline-block;
+    margin-bottom: 40px;
+    width: 64px;
+    height: 64px;
+}
+
+.weather-item span {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.weather-item ul {
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-top: 40px;
+    padding: 30px 20px;
+}
+
+.weather-item ul li {
+    display: inline-block;
+    margin: 0px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #121212;
+}
+
+.weather-item ul li span {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #121212;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 5px 8px;
+}
+
+.services {
+    margin: 50px 0;
+}
+
+.services .service-item {
+    background-color: #015291;
+    color: #fff;
+    padding: 60px 30px 20px 30px;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.service-item h4 {
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.service-item .service-icon {
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+}
+
+.first-service .service-icon {
+    background-image: url("https://img.icons8.com/cotton/88/stopwatch.png");
+    background-size: 88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+    width: 88px;
+    height: 88px;
+}
+
+.second-service .service-icon {
+    background-image: url("https://img.icons8.com/cotton/88/discount.png");
+    background-size: 88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+    width: 88px;
+    height: 88px;
+}
+
+.fourth-service .service-icon {
+    background-image: url("https://img.icons8.com/cotton/88/card-security.png");
+    background-size: 88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+    width: 88px;
+    height: 88px;
+}
+
+.third-service .service-icon {
+    background-image: url("https://img.icons8.com/cotton/88/doorman--v1.png");
+    background-size: 88px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.5s;
+    width: 88px;
+    height: 88px;
+}
+
+.service-item:hover {
+    color: #121212;
+    background-color: #fd7604;
+}
+
+#recommended-hotel {
+    background-color: #e5f1ff;
+    padding: 30px 0px;
+}
+
+#recommended-hotel .tabs {
+    list-style: none;
+    margin-top: 0px;
+    padding-right: 0px;
+}
+
+#recommended-hotel .tabs li:first-child {
+    margin-top: 0px;
+}
+
+#recommended-hotel .tabs li {
+    display: block;
+    text-align: center;
+    margin: 8px 0px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#recommended-hotel .tabs a {
+    display: block;
+    transition: all 0.5s;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    background-color: #015291;
+    border-radius: 10px;
+}
+
+#recommended-hotel .tabs a em {
+    font-style: normal;
+    font-weight: 700;
+}
+
+#recommended-hotel .tabs a i {
+    float: right;
+    background-color: rgba(250, 250, 250, 0.2);
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 36px;
+}
+
+#recommended-hotel .tabs .active {
+    background-color: #fd7604;
+    color: #121212;
+}
+
+#recommended-hotel .tabs .active i {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.recommendedgroup {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 19px;
+}
+
+#most-visited {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding: 10px 0px;
+}
+
+#most-visited1 {
+    margin-top: 6px;
+    margin-bottom: -100px;
+}
+
+.visited-item {
+    margin-bottom: 30px;
+}
+
+.visited-item .text-content {
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.visited-item img {
+    width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.visited-item h4 {
+    margin-top: 0px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #121212;
+}
+
+.visited-item span {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3f6f90;
+}
+
+#owl-mostvisited .owl-pagination, #owl-mostvisited1 .owl-pagination {
+    margin-top: 20px;
+    opacity: 1;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    z-index: 9999;
+    background-color: transparent;
+    height: 0px;
+    line-height: 0px;
+    padding: 0px;
+}
+
+#owl-mostvisited .owl-page span, #owl-mostvisited1 .owl-page span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0px 5px;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+    border-radius: 20px;
+    background: #ddd;
+}
+
+#owl-mostvisited .owl-controls .owl-page.active span, #owl-mostvisited .owl-controls.clickable .owl-page:hover span,
+#owl-mostvisited1 .owl-controls .owl-page.active span, #owl-mostvisited1 .owl-controls.clickable .owl-page:hover span {
+    filter: Alpha(Opacity=100);
+    opacity: 1;
+    display: inline-block;
+    background: #fd7604;
+}
+
+footer {
+    text-align: center;
+    background-color: #015291;
+    padding: 10px 0px;
+}
+
+footer .primary-button {
+    margin-bottom: 40px;
+}
+
+footer .social-icons {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .social-icons li {
+    display: inline-block;
+    margin: 0px 3px;
+}
+
+footer .social-icons li a {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    line-height: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    background-color: #364a59;
+    transition: all 0.5s;
+    border-radius: 20px;
+}
+
+footer .social-icons li a:hover {
+    background-color: #fd7604;
+    color: #015291;
+}
+
+footer p {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+footer p em {
+    font-style: normal;
+    font-weight: 700;
+    color: #fd7604;
+}
+
+.contact-form {
+    margin-top: 100px;
+    background-image: url(../img/contact-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+.contact-form h2 {
+    color: #fff;
+}
+
+.contact-form input {
+    font-size: 13px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 36px;
+    padding-left: 15px;
+    background-color: #fff;
+    color: #4a4a4a;
+    outline: none;
+    border-radius: 40px;
+}
+
+.contact-form button {
+    outline: none;
+    width: 190px;
+    height: 36px;
+    background-color: #fd7604;
+    font-size: 13px;
+    color: #121212;
+    font-weight: 600;
+    border-radius: 30px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #32a8dd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#widget-flight, #widget-hotel, #widget-taxi, #widget-esim, #widget-ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+/* Responsive Design */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .banner .row {
+        align-items: center;
+    }
+
+    .banner .left-side {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .banner .submit-form {
+        margin: 60px auto;
+    }
+
+    .services .service-item {
+        min-height: 300px;
+    }
+}
+
+@media (min-width: 992px) {
+    #recommended-hotel .wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    #recommended-hotel .tabs-container {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    #recommended-hotel .recommendedgroup {
+        flex: 0 0 75%;
+        max-width: 75%;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .banner .left-side {
+        text-align: center;
+        overflow: hidden;
+        padding-left: 0vh;
+        margin-left: -50vh;
+        margin-right: -50vh;
+        padding-right: 50vh;
+        padding-left: 50vh;
+    }
+
+    .banner .social-links {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .banner .page-direction-button {
+        margin-top: 50px;
+    }
+
+    .banner .logo img {
+        padding-top: 40px;
+        max-width: 100%;
+    }
+
+    .banner .tabs-content {
+        margin-top: 60px;
+    }
+
+    .banner .submit-form {
+        margin: 30px 30px;
+    }
+
+    #weather .tabs li {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0px 0px;
+    }
+
+    #weather .tabs a {
+        font-size: 13px;
+        height: 60px;
+        line-height: 60px;
+    }
+
+    .service-item {
+        margin: 30px 0px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .banner .submit-form {
+        margin: 20px 10px;
+    }
+
+    .contact-form input {
+        font-size: 12px;
+        height: 34px;
+    }
+
+    .contact-form button {
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner .logo img {
+        max-width: 200px;
+    }
+
+    .banner .social-links a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .submit-form h4 {
+        font-size: 16px;
+    }
+
+    footer .social-icons li a {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 20px;
+    }
+}
